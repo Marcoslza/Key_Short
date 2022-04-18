@@ -148,3 +148,164 @@ Send {Click Left}
 Sendinput ^r
 Send 100{Enter}
 return
+
+;;pesquisa
+^Space::
+MouseClick, left, 1080, 192
+return
+
+;;transição
+5::
+MouseGetPos, MouseX, MouseY
+MouseClick, left, 3249, 228
+MouseClick, left, 3591, 347
+MouseClick, left, 3253, 343
+Send TR1 {enter}
+Sleep 100
+MouseClickDrag, Left, 3319, 552, %MouseX%, %MouseY%, 10
+return
+
+;;transição 2
++5::
+MouseGetPos, MouseX, MouseY
+MouseClick, left, 3249, 228
+MouseClick, left, 3591, 347
+MouseClick, left, 3253, 343
+Send TR2 {enter}
+Sleep 100
+MouseClickDrag, Left, 3319, 552, %MouseX%, %MouseY%, 10
+return
+
+;;transição 3
+^5::
+MouseGetPos, MouseX, MouseY
+MouseClick, left, 3249, 228
+MouseClick, left, 3591, 347
+MouseClick, left, 3253, 343
+Send TR3 {enter}
+Sleep 100
+MouseClickDrag, Left, 3319, 552, %MouseX%, %MouseY%, 10
+return
+
+;;citação
+6::
+MouseGetPos, MouseX, MouseY
+MouseClick, left, 3249, 228
+MouseClick, left, 3591, 347
+MouseClick, left, 3253, 343
+Send 08 {enter}
+Sleep 100
+MouseClickDrag, Left, 3319, 552, %MouseX%, %MouseY%, 10
+Sleep 500
+MouseMove, 30, 0,, R
+Click
+Sleep 100
+MouseClick, left, 3477, 359
+SendInput ^v
+return
+
+;;título e descrição
++6::
+MouseGetPos, MouseX, MouseY
+MouseClick, left, 3249, 228
+MouseClick, left, 3591, 347
+MouseClick, left, 3253, 343
+Send 21 {enter}
+Sleep 100
+MouseClickDrag, Left, 3319, 552, %MouseX%, %MouseY%, 10
+return
+
+;;texto curto
+7::
+BlockInput, MouseMove
+MouseGetPos, MouseX, MouseY
+MouseClick, left, 3249, 228
+MouseClick, left, 3591, 347
+MouseClick, left, 3253, 343
+Send 22 {enter}
+Sleep 100
+MouseClickDrag, Left, 3319, 552, %MouseX%, %MouseY%, 10
+Sleep 500
+MouseMove, 30, 0,, R
+Click
+Sleep 200
+MouseClick, left, 3477, 359
+SendInput ^v
+BlockInput, MouseMoveOff
+return
+
+;;texto curto 2
++7::
+BlockInput, MouseMove
+MouseGetPos, MouseX, MouseY
+MouseClick, left, 3249, 228
+MouseClick, left, 3591, 347
+MouseClick, left, 3253, 343
+Send 06 {enter}
+Sleep 100
+MouseClickDrag, Left, 3319, 552, %MouseX%, %MouseY%, 10
+Sleep 500
+MouseMove, 30, 0,, R
+Click
+Sleep 200
+MouseClick, left, 3477, 359
+SendInput ^v
+BlockInput, MouseMoveOff
+return
+
+;;titulo e destaque
+8::
+BlockInput, MouseMove
+MouseGetPos, MouseX, MouseY
+MouseClick, left, 3249, 228
+MouseClick, left, 3591, 347
+MouseClick, left, 3253, 343
+Send 10 {enter}
+Sleep 100
+MouseClickDrag, Left, 3319, 552, %MouseX%, %MouseY%, 10
+Sleep 500
+MouseMove, 30, 0,, R
+Click
+Sleep 200
+MouseClick, left, 3477, 359
+SendInput ^v
+BlockInput, MouseMoveOff
+return
+
+;;Lei
+9::
+BlockInput, MouseMove
+MouseGetPos, MouseX, MouseY
+MouseClick, left, 3249, 228
+MouseClick, left, 3591, 347
+MouseClick, left, 3253, 343
+Send 17 {enter}
+Sleep 100
+MouseClickDrag, Left, 3319, 552, %MouseX%, %MouseY%, 10
+Sleep 500
+MouseMove, 30, 0,, R
+Click
+Sleep 200
+MouseClick, left, 3477, 359
+SendInput ^v
+BlockInput, MouseMoveOff
+return
+
+;;imagem lateral
+0::
+BlockInput, MouseMove
+MouseGetPos, MouseX, MouseY
+MouseClick, left, 3249, 228
+MouseClick, left, 3591, 347
+MouseClick, left, 3253, 343
+Send 13 {enter}
+Sleep 100
+MouseClickDrag, Left, 3319, 552, %MouseX%, %MouseY%, 10
+BlockInput, MouseMoveOff
+return
+
+;;Colar
+Tab::
+MouseClick, left, 3477, 359
+SendInput ^v
+return
